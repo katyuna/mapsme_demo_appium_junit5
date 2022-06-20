@@ -1,0 +1,2 @@
+D:/SoftWareCats/Projects/Maps.me/apk/v13.0.71324-googleRelease.zip/android/app/build/outputs/apk/google/releasemapsme-android-googleRelease-vc71324-17062022.apk filter=lfs diff=lfs merge=lfs -text
+**/**/*.apk filter=lfs diff=lfs merge=lfs -text
