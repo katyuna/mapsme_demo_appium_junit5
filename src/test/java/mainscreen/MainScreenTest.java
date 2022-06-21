@@ -19,21 +19,25 @@ public class MainScreenTest {
     //@DisplayName("Main Screen")
     public void testMainPage() {
 
-        // Устанавливаем Android Driver:
-        AndroidDriver driver = null;
-
         //Задаем параметры
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("deviceName", "Xiaomi Mi 9 SE"); //f0c565e9
-        capabilities.setCapability("udid", "f0c565e9");
-        //Cсылка на APK, который нужно будет запускать
-        // .apk должен быть debug сборкой, чтобы вы и appium могли делать inspect приложения
+        //Для реального девайса
+        //capabilities.setCapability("deviceName", "Xiaomi Mi 9 SE"); //f0c565e9
+        //capabilities.setCapability("udid", "f0c565e9");
+        //.apk, который нужно будет запускать, .apk должен быть debug сборкой, чтобы вы и appium могли делать inspect приложения
+        //capabilities.setCapability("appPackage", "com.mapswithme.maps.pro.kode.debug");
+        //capabilities.setCapability("appActivity", "com.mapswithme.maps.MainActivity");
+        //Для эмулятора
+        capabilities.setCapability("deviceName", "001_Pixel_2_API_28"); //f0c565e9
+        capabilities.setCapability("udid", "emulator-5554");
         capabilities.setCapability("appPackage", "com.mapswithme.maps.pro");
         capabilities.setCapability("appActivity", "com.mapswithme.maps.MainActivity");
 
+        // Устанавливаем Android Driver:
+        AndroidDriver driver = null;
 
-//Запускаем Appium драйвер
+        //Запускаем Appium драйвер
         try {
             driver = new AndroidDriver (new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
             driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -41,10 +45,18 @@ public class MainScreenTest {
             System.out.println(e.getMessage());
         }
 
-        //        AndroidDriver driver = new AndroidDriver(remoteUrl, capabilities);
         TouchActions touchActions = new TouchActions(driver);
 
-        touchActions.singleTap(driver.findElement(By.id("00000000-0000-01cf-3b9a-ca2b00000004")));
+        //touchActions.singleTap(driver.findElement(By.id("00000000-0000-0012-3b9a-ca0600000004")));
+        touchActions.singleTap(driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View[4]/android.widget.Button")));
+
+
+        /*
+        /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View[4]/android.widget.Button
+         */
+
+
+
 
     }
 }
