@@ -1,9 +1,8 @@
-package mainscreen;
+package com;
 
 import io.appium.java_client.android.AndroidDriver;
+import org.junit.After;
 import org.junit.Before;
-import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -11,14 +10,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-public class MainScreenTest {
+public class BaseTest {
     @Before
-    public void setup(){
-    }
-    @Test
-    //@DisplayName("Main Screen")
-    public void testMainPage() {
-
+    public void before() throws MalformedURLException {
         //Задаем параметры
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "Android");
@@ -34,29 +28,23 @@ public class MainScreenTest {
         capabilities.setCapability("appPackage", "com.mapswithme.maps.pro");
         capabilities.setCapability("appActivity", "com.mapswithme.maps.MainActivity");
 
-        // Устанавливаем Android Driver:
-        AndroidDriver driver = null;
+        //Задаем url Appim-сервера
+        URL url = new URL("http://127.0.0.1:4723/wd/hub");
+        //Создаем Android-драйвер
+       // AndroidDriver driver = null;
+        AndroidDriver driver = new AndroidDriver (url, capabilities);
 
+/*
         //Запускаем Appium драйвер
         try {
             driver = new AndroidDriver (new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
             driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         } catch (MalformedURLException e) {
             System.out.println(e.getMessage());
-        }
+        }*/
 
         TouchActions touchActions = new TouchActions(driver);
-
-        //touchActions.singleTap(driver.findElement(By.id("00000000-0000-0012-3b9a-ca0600000004")));
-        touchActions.singleTap(driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View[4]/android.widget.Button")));
-
-
-        /*
-        /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View[4]/android.widget.Button
-         */
-
-
-
-
     }
+
+
 }
