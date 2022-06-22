@@ -19,7 +19,7 @@
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
             <version>8.1.1</version>
-        </dependency>
+                    </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -30,7 +30,7 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.2.2</version>
-        </dependency>
+            </dependency>
     </dependencies>
 
 </project>

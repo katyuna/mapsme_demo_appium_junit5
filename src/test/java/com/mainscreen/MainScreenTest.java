@@ -1,20 +1,15 @@
 package com.mainscreen;
 
 import com.BaseTest;
-import io.appium.java_client.android.AndroidDriver;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.touch.TouchActions;
-import org.openqa.selenium.remote.DesiredCapabilities;
-
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.concurrent.TimeUnit;
 
 public class MainScreenTest extends BaseTest {
     @Test
     //@DisplayName("Main Screen")
     public void testMainPage() {
+
 
         /*  //Задаем параметры
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -48,7 +43,7 @@ public class MainScreenTest extends BaseTest {
 
         //touchActions.singleTap(driver.findElement(By.id("00000000-0000-0012-3b9a-ca0600000004")));
 
-
+        TouchActions touchActions = new TouchActions(driver);
 
         touchActions.singleTap(driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View[4]/android.widget.Button")));
 

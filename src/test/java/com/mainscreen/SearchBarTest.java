@@ -1,4 +1,6 @@
 package com.mainscreen;
 
-public class SearchBarTest {
+import com.BaseTest;
+
+public class SearchBarTest extends BaseTest {
 }

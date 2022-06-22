@@ -14,7 +14,7 @@ public class BaseTest {
     @Before
     public void before() throws MalformedURLException {
         //Задаем параметры
-        DesiredCapabilities capabilities = new DesiredCapabilities();
+        protected DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "Android");
         //Для реального девайса
         //capabilities.setCapability("deviceName", "Xiaomi Mi 9 SE"); //f0c565e9
@@ -29,10 +29,8 @@ public class BaseTest {
         capabilities.setCapability("appActivity", "com.mapswithme.maps.MainActivity");
 
         //Задаем url Appim-сервера
-        URL url = new URL("http://127.0.0.1:4723/wd/hub");
-        //Создаем Android-драйвер
-       // AndroidDriver driver = null;
-        AndroidDriver driver = new AndroidDriver (url, capabilities);
+        URL url =  new URL("http://127.0.0.1:4723/wd/hub");
+
 
 /*
         //Запускаем Appium драйвер
@@ -43,8 +41,7 @@ public class BaseTest {
             System.out.println(e.getMessage());
         }*/
 
-        TouchActions touchActions = new TouchActions(driver);
-    }
+}
 
 
 }
