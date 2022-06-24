@@ -11,10 +11,22 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
+
+    //Задаем url Appim-сервера
+    protected URL url;
+
+    {
+        try {
+            url = new URL("http://127.0.0.1:4723/wd/hub");
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    protected DesiredCapabilities capabilities = new DesiredCapabilities();
     @Before
-    public void before() throws MalformedURLException {
+    public void before() {
         //Задаем параметры
-        protected DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "Android");
         //Для реального девайса
         //capabilities.setCapability("deviceName", "Xiaomi Mi 9 SE"); //f0c565e9
@@ -27,9 +39,9 @@ public class BaseTest {
         capabilities.setCapability("udid", "emulator-5554");
         capabilities.setCapability("appPackage", "com.mapswithme.maps.pro");
         capabilities.setCapability("appActivity", "com.mapswithme.maps.MainActivity");
+        capabilities.setCapability("automationName", "UiAutomator2");
+        capabilities.setCapability("noReset", true);
 
-        //Задаем url Appim-сервера
-        URL url =  new URL("http://127.0.0.1:4723/wd/hub");
 
 
 /*
