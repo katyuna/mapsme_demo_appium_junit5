@@ -18,8 +18,10 @@ public class MainScreenElementsTest extends BaseTest {
 
         //Создаем Android-драйвер
         AndroidDriver driver = new AndroidDriver (url, capabilities);
-        driver.runAppInBackground(Duration.ofSeconds(10)); //put app in background for 10 seconds
-
+        //убрать в фон
+        driver.runAppInBackground(Duration.ofSeconds(10));
+        //зпустить из фона
+        driver.currentActivity();
 
 
         /*
