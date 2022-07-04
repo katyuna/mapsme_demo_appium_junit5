@@ -3,7 +3,8 @@ package com;
 import io.appium.java_client.android.AndroidDriver;
 import org.junit.After;
 import org.junit.Before;
-import org.openqa.selenium.interactions.touch.TouchActions;
+import org.openqa.selenium.By;
+//import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
@@ -52,8 +53,5 @@ public class BaseTest {
         } catch (MalformedURLException e) {
             System.out.println(e.getMessage());
         }*/
-
-}
-
-
+    }
 }
