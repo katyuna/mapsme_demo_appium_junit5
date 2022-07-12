@@ -29,16 +29,17 @@ public class BaseTest {
     public void before() {
         //Задаем параметры
         capabilities.setCapability("platformName", "Android");
-        //Для реального девайса
-        //capabilities.setCapability("deviceName", "Xiaomi Mi 9 SE"); //f0c565e9
-        //capabilities.setCapability("udid", "f0c565e9");
+        /*Для реального девайса
+        capabilities.setCapability("deviceName", "Xiaomi Mi 9 SE"); //f0c565e9
+        capabilities.setCapability("udid", "f0c565e9");
         //.apk, который нужно будет запускать, .apk должен быть debug сборкой, чтобы вы и appium могли делать inspect приложения
-        //capabilities.setCapability("appPackage", "com.mapswithme.maps.pro.kode.debug");
-        //capabilities.setCapability("appActivity", "com.mapswithme.maps.MainActivity");
-        //Для эмулятора
-        capabilities.setCapability("deviceName", "001_Pixel_2_API_28"); //f0c565e9
+        capabilities.setCapability("appPackage", "com.mapswithme.maps.pro.kode.debug");
+        capabilities.setCapability("appActivity", "com.mapswithme.maps.MainActivity");
+        capabilities.setCapability("noReset", true);*/
+        /*Для эмулятора*/
+        capabilities.setCapability("deviceName", "Pixel 2 API 28");
         capabilities.setCapability("udid", "emulator-5554");
-        capabilities.setCapability("appPackage", "com.mapswithme.maps.pro");
+        capabilities.setCapability("appPackage", "com.mapswithme.maps.pro.kode");
         capabilities.setCapability("appActivity", "com.mapswithme.maps.MainActivity");
         capabilities.setCapability("automationName", "UiAutomator2");
         capabilities.setCapability("noReset", true);
