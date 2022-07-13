@@ -1,3 +1,5 @@
+/*
+
 package com.mainscreen;
 
 import com.BaseTest;
@@ -18,7 +20,12 @@ import io.appium.java_client.remote.MobileCapabilityType;
 public class MainScreenElementsTest extends BaseTest {
 
 
+
+
+
+
     @Test
+
     public void testIsMainScreenOpened (){
         //Создаем Android-драйвер
         AndroidDriver driver = new AndroidDriver (url, capabilities);
@@ -33,6 +40,7 @@ public class MainScreenElementsTest extends BaseTest {
 
 
 
+    */
 
 
 
@@ -111,3 +119,4 @@ public class MainScreenElementsTest extends BaseTest {
 
 
     }
+*/

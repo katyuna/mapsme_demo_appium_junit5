@@ -1,5 +1,6 @@
 package com;
 
+import com.po.MainScreen;
 import io.appium.java_client.android.AndroidDriver;
 import org.junit.After;
 import org.junit.Before;
@@ -10,6 +11,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
+
+import static com.codeborne.selenide.Selenide.open;
 
 public class BaseTest {
 
@@ -27,6 +30,11 @@ public class BaseTest {
     protected DesiredCapabilities capabilities = new DesiredCapabilities();
     @Before
     public void before() {
+
+        //MainScreen mainScreen = open(url, MainScreen.class);
+
+
+
         //Задаем параметры
         capabilities.setCapability("platformName", "Android");
         /*Для реального девайса
