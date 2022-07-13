@@ -15,17 +15,16 @@ public class OpenApp extends BaseTest {
 
     @Test
     @DisplayName("Is main screen opened")
-    public void testIsMainScreenOpened {
+    public void testIsMainScreenOpened (){
         MainScreen mainScreen = page(MainScreen.class);
         //mainPage.searchButton.click();
         //START THE APP
         //Create Android-driver
         AndroidDriver driver = new AndroidDriver (url, capabilities);
-        //driver.setSetting("driver", "compose");
         //Wait until the app starts
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         //ASSERT that Search button is displayed
         boolean searchButtonIsDisplayed = mainScreen.isSearchButton();
-        assertTrue("Error^ no search button on the main screen", searchButtonIsDisplayed);
+        assertTrue("Error: no search button on the main screen", searchButtonIsDisplayed);
     }
 }

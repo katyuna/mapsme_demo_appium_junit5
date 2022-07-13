@@ -11,7 +11,7 @@ public class MainScreen {
     public SelenideElement searchButton;
 
     //Search button click
-    public void clickEnterButton() {
+    public void clickSearchButton() {
         this.searchButton.click();
     }
     //Is Search button displayed
