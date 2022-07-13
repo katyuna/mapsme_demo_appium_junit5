@@ -24,8 +24,6 @@ public class OpenApp extends BaseTest {
         AndroidDriver driver = new AndroidDriver (url, capabilities);
         //Wait until the app starts
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-
         //ASSERT that Search button is displayed
         boolean searchButtonIsDisplayed = driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]")).isDisplayed();
         assertTrue("Error: no search button on the main screen", searchButtonIsDisplayed);

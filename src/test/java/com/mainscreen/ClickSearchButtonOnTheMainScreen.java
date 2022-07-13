@@ -26,6 +26,8 @@ public class ClickSearchButtonOnTheMainScreen extends BaseTest {
         //Click Search button on the main screen
         driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]")).click();
         //ASSERT that Search title is displayed
+        //Переписать эту проверку
+        //Нужно проскроллить до More и проверить что есть More
         boolean searchTitleIsDisplayed = driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.widget.TextView")).isDisplayed();
         assertTrue("Error: no search title on the main small search bottom sheet", searchTitleIsDisplayed);
     }
