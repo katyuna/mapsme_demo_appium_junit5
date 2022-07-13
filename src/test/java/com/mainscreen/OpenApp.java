@@ -9,20 +9,23 @@ import org.junit.jupiter.api.DisplayName;
 import java.util.concurrent.TimeUnit;
 
 import static com.codeborne.selenide.Selenide.page;
+import static org.junit.Assert.assertTrue;
 
 public class OpenApp extends BaseTest {
 
     @Test
     @DisplayName("Is main screen opened")
     public void testIsMainScreenOpened {
-        //MainScreen mainPage = page(MainScreen.class);
+        MainScreen mainScreen = page(MainScreen.class);
         //mainPage.searchButton.click();
-        //Создаем Android-драйвер
+        //START THE APP
+        //Create Android-driver
         AndroidDriver driver = new AndroidDriver (url, capabilities);
         //driver.setSetting("driver", "compose");
-        //Подождем пока приложение запустится
+        //Wait until the app starts
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
+        //ASSERT that Search button is displayed
+        boolean searchButtonIsDisplayed = mainScreen.isSearchButton();
+        assertTrue("Error^ no search button on the main screen", searchButtonIsDisplayed);
     }
-
 }

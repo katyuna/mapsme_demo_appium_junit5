@@ -14,6 +14,10 @@ public class MainScreen {
     public void clickEnterButton() {
         this.searchButton.click();
     }
+    //Is Search button displayed
+    public boolean isSearchButton() {
+        return searchButton.isDisplayed();
+    }
 
 
 }
