@@ -10,6 +10,8 @@ import java.util.concurrent.TimeUnit;
 
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.MobileCapabilityType;
 
 //import org.openqa.selenium.interactions.touch.*;
 
@@ -20,14 +22,25 @@ public class MainScreenElementsTest extends BaseTest {
     public void testIsMainScreenOpened (){
         //Создаем Android-драйвер
         AndroidDriver driver = new AndroidDriver (url, capabilities);
+        //driver.setSetting("driver", "compose");
         //Подождем пока приложение запустится
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         //окно настроек, добавить if presented
        // driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View/android.widget.CheckBox")).click();
       //  driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.Button")).click();
 
-      // String a = driver.findElement(By.id("map_screen_controls")).getAttribute("elementId");
-      // System.out.println(a);
+        driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]")).click();
+
+
+
+
+
+
+
+        /*String a = String.valueOf(driver.findElement(By.id("map_screen_controls")));
+      System.out.println(a);*/
+
+
 
 
 
@@ -75,7 +88,24 @@ public class MainScreenElementsTest extends BaseTest {
             actions.down(startX, startY).perform();
             sleep(0.5);
             actions.move(endX, endY).perform();
-            actions.up(endX, endY).perform();*/
+            actions.up(endX, endY).perform();
+
+
+
+            public void Swipedown() throws InterruptedException
+{
+  // Select till which position you want to move the seekbar
+  TouchAction action=new TouchAction((PerformsTouchActions) driver);
+  Dimension dimensions = driver.manage().window().getSize();
+
+  action.press(446,1404).moveTo(554,1500).release().perform();
+
+    System.out.println("swipe down to set seekbar successfully");
+    Thread.sleep(5000);
+    }
+
+
+            */
         }
 
 

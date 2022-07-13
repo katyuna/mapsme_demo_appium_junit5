@@ -37,7 +37,7 @@ public class BaseTest {
         capabilities.setCapability("appActivity", "com.mapswithme.maps.MainActivity");
         capabilities.setCapability("noReset", true);*/
         /*Для эмулятора*/
-        capabilities.setCapability("deviceName", "Pixel 2 API 28");
+        capabilities.setCapability("deviceName", "Pixel 2 API 31");
         capabilities.setCapability("udid", "emulator-5554");
         capabilities.setCapability("appPackage", "com.mapswithme.maps.pro.kode.debug");
         capabilities.setCapability("appActivity", "com.mapswithme.maps.MainActivity");
