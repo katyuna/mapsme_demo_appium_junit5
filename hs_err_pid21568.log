@@ -1,0 +1,195 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 65536 bytes for Failed to commit area from 0x000001a9803a0000 to 0x000001a9803b0000 of length 65536.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/os/windows/os_windows.cpp:3390), pid=21568, tid=908
+#
+# JRE version:  (11.0.15+9) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.15+9-LTS, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -ea -Didea.test.cyclic.buffer.size=1048576 -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.2\lib\idea_rt.jar=50409:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.2\bin -Dfile.encoding=UTF-8 com.intellij.rt.junit.JUnitStarter -ideVersion5 -junit4 com.mainscreen.MainScreenElementsTest
+
+Host: AMD Ryzen 5 5500U with Radeon Graphics         , 12 cores, 31G,  Windows 11 , 64 bit Build 22000 (10.0.22000.708)
+Time: Tue Jul 12 19:03:30 2022  Windows 11 , 64 bit Build 22000 (10.0.22000.708) elapsed time: 0.034111 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001a9e3348800):  JavaThread "Unknown thread" [_thread_in_vm, id=908, stack(0x000000910af00000,0x000000910b000000)]
+
+Stack: [0x000000910af00000,0x000000910b000000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x61e7ba]
+V  [jvm.dll+0x7ab749]
+V  [jvm.dll+0x7ace38]
+V  [jvm.dll+0x7ad513]
+V  [jvm.dll+0x24f968]
+V  [jvm.dll+0x61ba5a]
+V  [jvm.dll+0x6102b5]
+V  [jvm.dll+0x30768c]
+V  [jvm.dll+0x307512]
+V  [jvm.dll+0x30c340]
+V  [jvm.dll+0x3528e2]
+V  [jvm.dll+0x352300]
+V  [jvm.dll+0x2e4688]
+V  [jvm.dll+0x2e57e6]
+V  [jvm.dll+0x785597]
+V  [jvm.dll+0x786d1f]
+V  [jvm.dll+0x35f609]
+V  [jvm.dll+0x768530]
+V  [jvm.dll+0x3cd0ff]
+V  [jvm.dll+0x3cf491]
+C  [jli.dll+0x5207]
+C  [ucrtbase.dll+0x26c0c]
+C  [KERNEL32.DLL+0x154e0]
+C  [ntdll.dll+0x485b]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001a9e11bc9f0, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001a9e335f800 GCTaskThread "GC Thread#0" [stack: 0x000000910b000000,0x000000910b100000] [id=31460]
+  0x000001a9e33e2000 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000910b100000,0x000000910b200000] [id=27440]
+  0x000001a9e33e3800 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000910b200000,0x000000910b300000] [id=3928]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffd32c13e57]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001a9e3345ea0] Heap_lock - owner thread: 0x000001a9e3348800
+
+Heap address: 0x000000060a200000, size: 8030 MB, Compressed Oops mode: Non-zero based: 0x000000060a200000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.014 Loaded shared library C:\Program Files\Amazon Corretto\jdk11.0.15_9\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff6d2690000 - 0x00007ff6d269d000 	C:\Program Files\Amazon Corretto\jdk11.0.15_9\bin\java.exe
+0x00007ffd78f80000 - 0x00007ffd79189000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffd77f80000 - 0x00007ffd7803d000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffd76460000 - 0x00007ffd767d9000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffd76b10000 - 0x00007ffd76c21000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffd72030000 - 0x00007ffd72047000 	C:\Program Files\Amazon Corretto\jdk11.0.15_9\bin\jli.dll
+0x00007ffd71b90000 - 0x00007ffd71ba9000 	C:\Program Files\Amazon Corretto\jdk11.0.15_9\bin\VCRUNTIME140.dll
+0x00007ffd782a0000 - 0x00007ffd7844c000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffd5efd0000 - 0x00007ffd5f275000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22000.120_none_9d947278b86cc467\COMCTL32.dll
+0x00007ffd767e0000 - 0x00007ffd76806000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffd77e50000 - 0x00007ffd77ef3000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffd78040000 - 0x00007ffd78069000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffd76890000 - 0x00007ffd769a2000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffd769b0000 - 0x00007ffd76a4d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffd78e40000 - 0x00007ffd78e71000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffd5df10000 - 0x00007ffd5dfab000 	C:\Program Files\Amazon Corretto\jdk11.0.15_9\bin\msvcp140.dll
+0x00007ffd32920000 - 0x00007ffd334a3000 	C:\Program Files\Amazon Corretto\jdk11.0.15_9\bin\server\jvm.dll
+0x00007ffd78d90000 - 0x00007ffd78e3e000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffd77db0000 - 0x00007ffd77e4e000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffd78c70000 - 0x00007ffd78d90000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffd78070000 - 0x00007ffd78078000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffd6e3f0000 - 0x00007ffd6e423000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffd41d00000 - 0x00007ffd41d09000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffd6c760000 - 0x00007ffd6c76a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffd78460000 - 0x00007ffd784cf000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffd755d0000 - 0x00007ffd755e8000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffd71bf0000 - 0x00007ffd71c00000 	C:\Program Files\Amazon Corretto\jdk11.0.15_9\bin\verify.dll
+0x00007ffd6d860000 - 0x00007ffd6da81000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffd60660000 - 0x00007ffd60691000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffd76810000 - 0x00007ffd7688f000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffd71b60000 - 0x00007ffd71b88000 	C:\Program Files\Amazon Corretto\jdk11.0.15_9\bin\java.dll
+0x00007ffd66ee0000 - 0x00007ffd66eea000 	C:\Program Files\Amazon Corretto\jdk11.0.15_9\bin\jimage.dll
+0x00007ffd66ef0000 - 0x00007ffd66efe000 	C:\Program Files\Amazon Corretto\jdk11.0.15_9\bin\instrument.dll
+0x00007ffd611f0000 - 0x00007ffd61208000 	C:\Program Files\Amazon Corretto\jdk11.0.15_9\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Amazon Corretto\jdk11.0.15_9\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22000.120_none_9d947278b86cc467;C:\Program Files\Amazon Corretto\jdk11.0.15_9\bin\server
+
+VM Arguments:
+jvm_args: -ea -Didea.test.cyclic.buffer.size=1048576 -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.2\lib\idea_rt.jar=50409:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.2\bin -Dfile.encoding=UTF-8 
+java_command: com.intellij.rt.junit.JUnitStarter -ideVersion5 -junit4 com.mainscreen.MainScreenElementsTest
+java_class_path (initial): C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.2\lib\idea_rt.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.2\plugins\junit\lib\junit5-rt.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.2\plugins\junit\lib\junit-rt.jar;D:\SoftWareCats\Projects\Maps.me\AutotestsMapsMe\android_tests\android_test001\target\test-classes;D:\SoftWareCats\Projects\Maps.me\AutotestsMapsMe\android_tests\android_test001\target\classes;C:\Users\katyuna\.m2\repository\io\appium\java-client\8.1.1\java-client-8.1.1.jar;C:\Users\katyuna\.m2\repository\org\seleniumhq\selenium\selenium-api\4.3.0\selenium-api-4.3.0.jar;C:\Users\katyuna\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.3.0\selenium-remote-driver-4.3.0.jar;C:\Users\katyuna\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\katyuna\.m2\repository\com\google\auto\service\auto-service-annotations\1.0.1\auto-service-annotations-1.0.1.jar;C:\Users\katyuna\.m2\repository\com\google\auto\service\auto-service\1.0.1\auto-service-1.0.1.jar;C:\Users\katyuna\.m2\repository\com\google\auto\auto-common\1.2\auto-common-1.2.jar;C:\Users\katyuna\.m2\repository\com\google\guava\guava\31.1-jre\guava-31.1-jre.jar;C:\Users\katyuna\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\katyuna\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\katyuna\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\katyuna\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;C:\Users\katyuna\.m2\repository\com\google\errorprone\error_prone_annotations\2.11.0\error_prone_annotations-2.11.0.jar;C:\Users\katyuna\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\katyuna\.m2\repository\io\netty\netty-buffer\4.1.78.Fin
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 10                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 526385152                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 8420065280                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5836300                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122910970                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122910970                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Amazon Corretto\jdk11.0.15_9
+PATH=C:\Program Files\Amazon Corretto\jdk11.0.15_9\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Common Files\Adobe\AGL;C:\Users\katyuna\AppData\Local\Android\Sdk\tools;C:\Users\katyuna\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Users\katyuna\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.2\bin;
+USERNAME=katyuna
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 104 Stepping 1, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 11 , 64 bit Build 22000 (10.0.22000.708)
+OS uptime: 20 days 7:28 hours
+
+CPU:total 12 (initial active 12) (12 cores per cpu, 2 threads per core) family 23 model 104 stepping 1 microcode 0x0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, mmxext, 3dnowpref, lzcnt, sse4a, ht, tsc, tscinvbit, tscinv, bmi1, bmi2, adx, sha, fma
+
+Memory: 4k page, system-wide physical 32117M (4384M free)
+TotalPageFile size 50769M (AvailPageFile size 3M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 571M, peak: 571M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.15+9-LTS) for windows-amd64 JRE (11.0.15+9-LTS), built on Apr 15 2022 22:20:31 by "Administrator" with unknown MS VC++:1916
+
+END.
