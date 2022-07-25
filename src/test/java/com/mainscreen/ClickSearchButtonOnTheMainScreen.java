@@ -8,8 +8,6 @@ import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.openqa.selenium.By;
 
-import java.util.concurrent.TimeUnit;
-
 import static com.codeborne.selenide.Selenide.page;
 import static org.junit.Assert.assertTrue;
 
@@ -18,14 +16,13 @@ public class ClickSearchButtonOnTheMainScreen extends BaseTest {
     @DisplayName("Is small Search bottom sheet opened " +
                 "when clicked search button on the main screen")
     public void testIsSmallSearchBottomSheetOpenedFromMainScreen  (){
-        //START THE APP
-        //Create Android-driver
-       //AndroidDriver driver = new AndroidDriver (url, capabilities);
-        //Wait until the app starts
-        //driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        //CLICK Search button on the main screen
-       driver.findElement(By.xpath(".//android.view.View[@resource-id='bottom_bar_search']")).click();
-        //ASSERT that Search title is displayed
+       //CLICK Search button on the main screen
+        driver.findElement(By.xpath(".//android.view.View[@resource-id='bottom_bar_search']")).click();
+
+        //MainScreen mainScreen = new MainScreen(driver);
+       // mainScreen.clickSearchButton();
+
+       //ASSERT that Search title is displayed
        boolean searchTitleIsDisplayed = driver.findElement(By.xpath(".//android.view.View[@resource-id='search_categories_header']")).isDisplayed();
        assertTrue("Error: no search title on the main small search bottom sheet", searchTitleIsDisplayed);
        //CLOSE Search bottom sheet
