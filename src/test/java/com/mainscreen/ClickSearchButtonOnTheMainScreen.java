@@ -7,6 +7,9 @@ import io.appium.java_client.android.AndroidDriver;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static com.codeborne.selenide.Selenide.page;
 import static org.junit.Assert.assertTrue;
@@ -15,12 +18,14 @@ public class ClickSearchButtonOnTheMainScreen extends BaseTest {
     @Test
     @DisplayName("Is small Search bottom sheet opened " +
                 "when clicked search button on the main screen")
-    public void testIsSmallSearchBottomSheetOpenedFromMainScreen  (){
+    public void testIsSmallSearchBottomSheetOpenedFromMainScreen (){
+        //Wait until main screen presented
+        WebElement dynamicElement = (new WebDriverWait(driver, 20))
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//android.view.View[@resource-id='bottom_bar_search']")));
        //CLICK Search button on the main screen
         //driver.findElement(By.xpath(".//android.view.View[@resource-id='bottom_bar_search']")).click();
-        driver.findObject
-        //MainScreen mainScreen = new MainScreen(driver);
-       //mainScreen.clickSearchButton();
+       MainScreen mainScreen = new MainScreen(driver);
+       mainScreen.clickSearchButton();
 
        //ASSERT that Search title is displayed
        boolean searchTitleIsDisplayed = driver.findElement(By.xpath(".//android.view.View[@resource-id='search_categories_header']")).isDisplayed();
