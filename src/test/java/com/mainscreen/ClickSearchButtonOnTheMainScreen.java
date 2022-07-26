@@ -17,10 +17,10 @@ public class ClickSearchButtonOnTheMainScreen extends BaseTest {
                 "when clicked search button on the main screen")
     public void testIsSmallSearchBottomSheetOpenedFromMainScreen  (){
        //CLICK Search button on the main screen
-        driver.findElement(By.xpath(".//android.view.View[@resource-id='bottom_bar_search']")).click();
-
+        //driver.findElement(By.xpath(".//android.view.View[@resource-id='bottom_bar_search']")).click();
+        driver.findObject
         //MainScreen mainScreen = new MainScreen(driver);
-       // mainScreen.clickSearchButton();
+       //mainScreen.clickSearchButton();
 
        //ASSERT that Search title is displayed
        boolean searchTitleIsDisplayed = driver.findElement(By.xpath(".//android.view.View[@resource-id='search_categories_header']")).isDisplayed();
