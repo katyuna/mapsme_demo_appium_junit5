@@ -8,7 +8,7 @@ import org.junit.jupiter.api.DisplayName;
 
 import static org.junit.Assert.assertTrue;
 
-public class ClickSearchButtonOnTheMainScreen extends BaseTest {
+public class ClickSearchButtonOnTheMainScreenTest extends BaseTest {
     @Test
     @DisplayName("Is Search categories bottom sheet opened " +
             "when clicked search button on the main screen bottom panel")

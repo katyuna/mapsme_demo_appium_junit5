@@ -21,7 +21,7 @@ public class BaseTest {
         //CAPABILITIES
         capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("automationName", "UiAutomator2");
+        //capabilities.setCapability("automationName", "UiAutomator2");
         capabilities.setCapability("noReset", true);
         /*Для реального девайса*/
         /*Xiaomi Mi 9 SE*/
