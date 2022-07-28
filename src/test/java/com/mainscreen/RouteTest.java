@@ -3,11 +3,10 @@ package com.mainscreen;
 import com.BaseTest;
 import com.po.MainScreen;
 import com.po.RouteBottomSheet;
+import io.qameta.allure.Step;
 import jdk.jfr.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class RouteTest extends BaseTest {
@@ -38,6 +37,6 @@ public class RouteTest extends BaseTest {
     public void waitR() {
         mainScreen.isRouteButton();
         boolean routeButtonIsDisplayed = mainScreen.isRouteButton();
-        assertTrue("Error: route button doesn't displays", routeButtonIsDisplayed);
+        assertTrue(routeButtonIsDisplayed, "Error: route button doesn't displays");
     }
 }
