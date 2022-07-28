@@ -22,13 +22,26 @@ public class MainScreen {
     @AndroidFindBy(xpath = ".//android.view.View[@resource-id='bottom_bar_search']")
     private AndroidElement searchButton;
 
-    //Search button click
+    @AndroidFindBy(xpath = ".//android.view.View[@resource-id='bottom_bar_routes']")
+    private AndroidElement routeButton;
+
+    //Click search button
     public void clickSearchButton() {
         this.searchButton.click();
     }
 
-    //Is Search button displayed
+    //Click route button
+    public void clickRouteButton() {
+        this.routeButton.click();
+    }
+
+    //Is search button displayed
     public boolean isSearchButton() {
         return searchButton.isDisplayed();
+    }
+
+    //Is route button displayed
+    public boolean isRouteButton() {
+        return routeButton.isDisplayed();
     }
 }

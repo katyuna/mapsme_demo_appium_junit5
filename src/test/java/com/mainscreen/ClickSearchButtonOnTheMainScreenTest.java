@@ -4,12 +4,14 @@ import com.BaseTest;
 import com.po.MainScreen;
 import com.po.SearchBottomSheet;
 import io.qameta.allure.Description;
+import io.qameta.allure.Step;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
 public class ClickSearchButtonOnTheMainScreenTest extends BaseTest {
+
     @Test
     @DisplayName("Open search category bottom sheet")
     @Description ("Search categories bottom sheet opened " +
