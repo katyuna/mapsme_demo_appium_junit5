@@ -1,4 +1,4 @@
-package com.mainscreen;
+/*package com.mainscreen;
 
 import com.BaseTest;
 import com.po.MainScreen;
@@ -31,4 +31,4 @@ public class RouteTest extends BaseTest {
         assertTrue("Error: route bottom sheet doesn't displays", routeSheetIsDisplayed);
     }
 
-}
+}*/
