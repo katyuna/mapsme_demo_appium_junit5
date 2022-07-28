@@ -1,10 +1,8 @@
 package com;
 
-import com.po.MainScreen;
-import com.po.SearchBottomSheet;
 import io.appium.java_client.android.AndroidDriver;
 import org.junit.Before;
-import org.junit.BeforeClass;
+import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
@@ -46,10 +44,8 @@ public class BaseTest {
         //DRIVER
         driver = new AndroidDriver(url, capabilities);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-
-
-        //driver.resetApp();
-         /* if(driver.findElement(By.xpath(".//android.widget.Button[@resource-id='com.android.permissioncontroller:id/permission_allow_foreground_only_button']")).isDisplayed()){
+        /*driver.resetApp();
+        if(driver.findElement(By.xpath(".//android.widget.Button[@resource-id='com.android.permissioncontroller:id/permission_allow_foreground_only_button']")).isDisplayed()){
             driver.findElement(By.xpath(".//android.widget.Button[@resource-id='com.android.permissioncontroller:id/permission_allow_foreground_only_button']")).click();
          }
         if (driver.findElement(By.xpath(".//android.widget.Button[@resource-id='com.android.permissioncontroller:id/permission_allow_button']")).isDisplayed()){

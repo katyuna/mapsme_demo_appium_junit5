@@ -1,23 +1,26 @@
-/*package com.mainscreen;
+package com.mainscreen;
 
 import com.BaseTest;
 import com.po.MainScreen;
 import com.po.RouteBottomSheet;
-import io.qameta.allure.Description;
-import io.qameta.allure.Step;
-import io.qameta.allure.junit4.DisplayName;
-import org.junit.Test;
+import jdk.jfr.Description;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class RouteTest extends BaseTest {
+    MainScreen mainScreen = new MainScreen(driver);
     @Test
     @DisplayName("Wait route button")
     @Description("Wait until rout button displays")
     public void testWaitRouteButton() {
-        MainScreen mainScreen = new MainScreen(driver);
+        waitR();
+        /*MainScreen mainScreen = new MainScreen(driver);
+        mainScreen.isRouteButton();
         boolean routeButtonIsDisplayed = mainScreen.isRouteButton();
-        assertTrue("Error: route button doesn't displays", routeButtonIsDisplayed);
+        assertTrue("Error: route button doesn't displays", routeButtonIsDisplayed);*/
     }
 
     @Test
@@ -28,7 +31,13 @@ public class RouteTest extends BaseTest {
         RouteBottomSheet routeBottomSheet = new RouteBottomSheet(driver);
         mainScreen.clickRouteButton();
         boolean routeSheetIsDisplayed = routeBottomSheet.isRouteTitle();
-        assertTrue("Error: route bottom sheet doesn't displays", routeSheetIsDisplayed);
+        assertTrue(routeSheetIsDisplayed, "Error: route bottom sheet doesn't displays");
     }
 
-}*/
+    @Step
+    public void waitR() {
+        mainScreen.isRouteButton();
+        boolean routeButtonIsDisplayed = mainScreen.isRouteButton();
+        assertTrue("Error: route button doesn't displays", routeButtonIsDisplayed);
+    }
+}

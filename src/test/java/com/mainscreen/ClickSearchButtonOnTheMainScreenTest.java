@@ -3,19 +3,17 @@ package com.mainscreen;
 import com.BaseTest;
 import com.po.MainScreen;
 import com.po.SearchBottomSheet;
-import io.qameta.allure.Description;
-import io.qameta.allure.Step;
-import io.qameta.allure.junit4.DisplayName;
-import org.junit.Test;
-import org.junit.jupiter.api.TestInstance;
+import jdk.jfr.Description;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ClickSearchButtonOnTheMainScreenTest extends BaseTest {
 
     @Test
     @DisplayName("Open search category bottom sheet")
-    @Description ("Search categories bottom sheet opened " +
+    @Description("Search categories bottom sheet opened " +
             "when clicked search button on the main screen bottom panel")
     public void testIsSearchCategoriesBottomSheetOpenedFromMainScreen() {
         //Create screens objects
@@ -26,7 +24,7 @@ public class ClickSearchButtonOnTheMainScreenTest extends BaseTest {
         mainScreen.clickSearchButton();
         //ASSERT that search categories bottom sheet is displayed
         boolean searchCategoriesHeaderIsDisplayed = searchBottomSheet.isSearchCategoriesConteiner();
-        assertTrue("Error: search category bottom sheet doesn't displays", searchCategoriesHeaderIsDisplayed);
+        assertTrue(searchCategoriesHeaderIsDisplayed, "Error: search category bottom sheet doesn't displays");
         //CLOSE Search categories bottom sheet
         searchBottomSheet.clickCloseButton();
     }
