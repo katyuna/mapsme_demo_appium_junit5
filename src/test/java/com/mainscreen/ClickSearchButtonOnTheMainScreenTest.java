@@ -5,13 +5,14 @@ import com.po.MainScreen;
 import com.po.SearchBottomSheet;
 import jdk.jfr.Description;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ClickSearchButtonOnTheMainScreenTest extends BaseTest {
 
     @Test
+    @Order(1)
     @DisplayName("Open search category bottom sheet")
     @Description("Search categories bottom sheet opened " +
             "when clicked search button on the main screen bottom panel")

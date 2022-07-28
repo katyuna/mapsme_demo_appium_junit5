@@ -1,13 +1,14 @@
 package com;
 
 import io.appium.java_client.android.AndroidDriver;
-import org.junit.Before;
-import org.openqa.selenium.By;
+import io.appium.java_client.remote.MobileCapabilityType;
+import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
+
 
 public class BaseTest {
 
@@ -15,13 +16,13 @@ public class BaseTest {
     protected DesiredCapabilities capabilities;
     protected AndroidDriver driver;
 
-    @Before
-    public void before() throws MalformedURLException {
+    @BeforeAll
+    public void beforeAll() throws MalformedURLException {
         //URL
         url = new URL("http://127.0.0.1:4723/wd/hub");
         //CAPABILITIES
         capabilities = new DesiredCapabilities();
-        capabilities.setCapability("platformName", "Android");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         //capabilities.setCapability("automationName", "UiAutomator2");
         capabilities.setCapability("noReset", true);
         /*Для реального девайса*/
