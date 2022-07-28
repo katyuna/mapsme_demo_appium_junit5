@@ -12,12 +12,12 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
 
-    protected URL url;
-    protected DesiredCapabilities capabilities;
+    protected static URL url;
+    protected static DesiredCapabilities capabilities;
     protected AndroidDriver driver;
 
     @BeforeAll
-    public void beforeAll() throws MalformedURLException {
+    static void init() throws MalformedURLException {
         //URL
         url = new URL("http://127.0.0.1:4723/wd/hub");
         //CAPABILITIES
