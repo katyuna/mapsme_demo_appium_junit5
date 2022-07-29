@@ -22,9 +22,17 @@ public class RouteBottomSheet {
     @AndroidFindBy(xpath = ".//android.widget.TextView[@text='Route']")
     private WebElement routeTitle;
 
+    @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.widget.Button")
+    private WebElement closeRouteSheetButton;
+
     //Is route title displayed
     public boolean isRouteTitle() {
         return routeTitle.isDisplayed();
+    }
+
+    //Close route sheet
+    public void clickCloseButton() {
+        this.closeRouteSheetButton.click();
     }
 
 
