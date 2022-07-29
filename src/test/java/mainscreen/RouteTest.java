@@ -1,8 +1,8 @@
-package com.mainscreen;
+package mainscreen;
 
-import com.BaseTest;
-import com.po.MainScreen;
-import com.po.RouteBottomSheet;
+import BaseTest;
+import po.MainScreen;
+import po.RouteBottomSheet;
 import io.qameta.allure.Step;
 import jdk.jfr.Description;
 import org.junit.jupiter.api.DisplayName;
