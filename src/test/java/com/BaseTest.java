@@ -14,7 +14,7 @@ public class BaseTest {
 
     protected static URL url;
     protected static DesiredCapabilities capabilities;
-    protected AndroidDriver driver;
+    protected static AndroidDriver driver;
 
     @BeforeAll
     static void init() throws MalformedURLException {
