@@ -16,7 +16,7 @@ public class RouteTest extends BaseTest {
     @Order(1)
     @DisplayName("Open route bottom sheet wi")
     @Description("Wait until rout button displays")
-    public void testWaitRouteButton() {
+    public void testRouteOpenSteps() {
         waitRouteButton();
         openRouteSheet();
         closeRouteSheet();
@@ -30,6 +30,7 @@ public class RouteTest extends BaseTest {
         mainScreen.clickRouteButton();
         boolean routeSheetIsDisplayed = routeBottomSheet.isRouteTitle();
         assertTrue(routeSheetIsDisplayed, "Error: route bottom sheet doesn't displays");
+        routeBottomSheet.clickCloseButton();
     }
 
     @Step
