@@ -1,17 +1,19 @@
 package mainscreen;
 
-import po.MainScreen;
-import po.SearchBottomSheet;
 import jdk.jfr.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import po.MainScreen;
+import po.SearchBottomSheet;
+
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SearchTest extends BaseTest {
     //Create screens objects
     MainScreen mainScreen = new MainScreen(driver);
     SearchBottomSheet searchBottomSheet = new SearchBottomSheet(driver);
+
     @Test
     @Order(1)
     @DisplayName("Open search category bottom sheet")
