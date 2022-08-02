@@ -1,4 +1,4 @@
-package mainscreen;
+/*package mainscreen;
 
 import jdk.jfr.Description;
 import org.junit.jupiter.api.DisplayName;
@@ -29,4 +29,4 @@ public class SearchTest extends BaseTest {
         //CLOSE Search categories bottom sheet
         searchBottomSheet.clickCloseButton();
     }
-}
+}*/

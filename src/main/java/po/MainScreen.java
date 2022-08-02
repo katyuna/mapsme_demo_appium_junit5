@@ -24,6 +24,10 @@ public class MainScreen {
     @AndroidFindBy(xpath = ".//android.view.View[@resource-id='bottom_bar_routes']")
     private WebElement routeButton;
 
+    @AndroidFindBy(xpath = ".//android.widget.ImageView[@content-desc=\"Zoom In\"]")
+    private WebElement zoomInButton;
+
+
     //Click search button
     public void clickSearchButton() {
         this.searchButton.click();

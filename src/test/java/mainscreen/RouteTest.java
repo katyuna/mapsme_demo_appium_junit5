@@ -1,4 +1,4 @@
-package mainscreen;
+/*package mainscreen;
 
 import org.junit.jupiter.api.Order;
 import po.MainScreen;
@@ -14,7 +14,7 @@ public class RouteTest extends BaseTest {
     RouteBottomSheet routeBottomSheet = new RouteBottomSheet(driver);
     @Test
     @Order(1)
-    @DisplayName("Open route bottom sheet wi")
+    @DisplayName("Open route bottom sheet with steps")
     @Description("Wait until rout button displays")
     public void testRouteOpenSteps() {
         waitRouteButton();
@@ -33,22 +33,23 @@ public class RouteTest extends BaseTest {
         routeBottomSheet.clickCloseButton();
     }
 
-    @Step
+    @Step ("Wait until route botton displsyed")
     public void waitRouteButton() {
         mainScreen.isRouteButton();
         boolean routeButtonIsDisplayed = mainScreen.isRouteButton();
         assertTrue(routeButtonIsDisplayed, "Error: route button doesn't displays");
     }
-    @Step
+    @Step ("Click route button and open route sheet")
     public void openRouteSheet() {
         mainScreen.clickRouteButton();
         boolean routeSheetIsDisplayed = routeBottomSheet.isRouteTitle();
         assertTrue(routeSheetIsDisplayed, "Error: route bottom sheet doesn't displays");
     }
-    @Step
+    @Step ("Close route sheet")
     public void closeRouteSheet() {
         routeBottomSheet.clickCloseButton();
         boolean routeButtonIsDisplayed = mainScreen.isRouteButton();
         assertTrue(routeButtonIsDisplayed, "Error: route button doesn't displays");
     }
 }
+*/
