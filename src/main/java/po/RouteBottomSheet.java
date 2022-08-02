@@ -18,22 +18,27 @@ public class RouteBottomSheet {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    //Search categories sheet header
-    @AndroidFindBy(xpath = ".//android.widget.TextView[@text='Route']")
-    private WebElement routeTitle;
+    //@AndroidFindBy(xpath = ".//android.widget.TextView[@text='Route']")
+    //private WebElement routeTitle;
 
-    @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.widget.Button")
+    @AndroidFindBy(xpath = ".//android.view.View[@content-desc='finish icon']")
+    private WebElement finishIcon;
+
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc='closeButton']")
     private WebElement closeRouteSheetButton;
 
     //Is route title displayed
-    public boolean isRouteTitle() {
+    /*public boolean isRouteTitle() {
         return routeTitle.isDisplayed();
+    }*/
+
+    //Is finish icon displayed
+    public boolean isFinishIcon() {
+        return finishIcon.isDisplayed();
     }
 
     //Close route sheet
     public void clickCloseButton() {
         this.closeRouteSheetButton.click();
     }
-
-
 }

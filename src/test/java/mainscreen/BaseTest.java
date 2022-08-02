@@ -26,19 +26,22 @@ public class BaseTest {
         //CAPABILITIES
         capabilities = new DesiredCapabilities();
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-         capabilities.setCapability("noReset", true);
-        /*Для реального девайса*/
+        capabilities.setCapability("noReset", true);
         /*Xiaomi Mi 9 SE*/
         //capabilities.setCapability("deviceName", "Xiaomi Mi 9 SE"); //f0c565e9
         //capabilities.setCapability("udid", "f0c565e9");
         /*samsung SM M215F*/
         //capabilities.setCapability("deviceName", "samsung SM M215F");  //R58R102ZDMT
         //capabilities.setCapability("udid", "R58R102ZDMT");
-        /*Для эмулятора*/
-        capabilities.setCapability("deviceName", "Pixel 2 API 31");
+        /*Emulator*/
+        capabilities.setCapability("deviceName", "Pixel 2 API 31 2");
         capabilities.setCapability("udid", "emulator-5554");
-        capabilities.setCapability("appPackage", "com.mapswithme.maps.pro.kode.debug");
+        //googleRelease
+        capabilities.setCapability("appPackage", "com.mapswithme.maps.pro");
         capabilities.setCapability("appActivity", "com.mapswithme.maps.MainActivity");
+        //debug
+        //capabilities.setCapability("appPackage", "com.mapswithme.maps.pro.kode.debug");
+        //capabilities.setCapability("appActivity", "com.mapswithme.maps.MainActivity");
         //DRIVER
         driver = new AndroidDriver(url, capabilities);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

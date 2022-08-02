@@ -18,13 +18,15 @@ public class MainScreen {
     }
 
     //Search button
-    @AndroidFindBy(xpath = ".//android.view.View[@resource-id='bottom_bar_search']")
+    //@AndroidFindBy(xpath = ".//android.view.View[@resource-id='bottom_bar_search']")
+    @AndroidFindBy(xpath = "(//android.view.View[@content-desc='bottom bar icon'])[1]")
     private WebElement searchButton;
 
-    @AndroidFindBy(xpath = ".//android.view.View[@resource-id='bottom_bar_routes']")
+    //@AndroidFindBy(xpath = ".//android.view.View[@resource-id='bottom_bar_routes']")
+    @AndroidFindBy(xpath = "(//android.view.View[@content-desc='bottom bar icon'])[2]")
     private WebElement routeButton;
 
-    @AndroidFindBy(xpath = ".//android.widget.ImageView[@content-desc=\"Zoom In\"]")
+    @AndroidFindBy(xpath = ".//android.widget.ImageView[@content-desc='Zoom In']")
     private WebElement zoomInButton;
 
 
