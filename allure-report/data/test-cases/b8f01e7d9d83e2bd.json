@@ -1,0 +1,82 @@
+{
+  "uid" : "b8f01e7d9d83e2bd",
+  "name" : "Open route bottom sheet",
+  "fullName" : "mainscreen.RouteTest.testRouteOpen",
+  "historyId" : "78a7df329067b2e076b42605fd79f8a1",
+  "time" : {
+    "start" : 1659078069931,
+    "stop" : 1659078098244,
+    "duration" : 28313
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 2,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "junit.platform.uniqueid",
+    "value" : "[engine:junit-jupiter]/[class:mainscreen.RouteTest]/[method:testRouteOpen()]"
+  }, {
+    "name" : "host",
+    "value" : "MSI"
+  }, {
+    "name" : "thread",
+    "value" : "25928@MSI.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "mainscreen.RouteTest"
+  }, {
+    "name" : "testClass",
+    "value" : "mainscreen.RouteTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testRouteOpen"
+  }, {
+    "name" : "suite",
+    "value" : "mainscreen.RouteTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "dffaa41a08d40c49",
+      "status" : "broken",
+      "statusDetails" : "Can't locate an element by this strategy: By.chained({By.xpath: .//android.view.View[@resource-id='bottom_bar_routes']})",
+      "time" : {
+        "start" : 1659077226513,
+        "stop" : 1659077246719,
+        "duration" : 20206
+      }
+    }, {
+      "uid" : "568e0f37fc9ffd6f",
+      "status" : "broken",
+      "statusDetails" : "Can't locate an element by this strategy: By.chained({By.xpath: .//android.view.View[@resource-id='bottom_bar_routes']})",
+      "time" : {
+        "start" : 1659077142091,
+        "stop" : 1659077162323,
+        "duration" : 20232
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b8f01e7d9d83e2bd.json",
+  "parameterValues" : [ ]
+}

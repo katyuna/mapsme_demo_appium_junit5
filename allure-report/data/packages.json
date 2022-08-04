@@ -1,0 +1,68 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "mainscreen",
+    "children" : [ {
+      "name" : "SearchTest",
+      "children" : [ {
+        "name" : "testIsSearchCategoriesBottomSheetOpenedFromMainScreen",
+        "uid" : "5755d9a59b0fa61c",
+        "parentUid" : "77a2d2bfde81d5c9c6f6719f8b0b0a25",
+        "status" : "broken",
+        "time" : {
+          "start" : 1659077477980,
+          "stop" : 1659077503288,
+          "duration" : 25308
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "77a2d2bfde81d5c9c6f6719f8b0b0a25"
+    }, {
+      "name" : "RouteTest",
+      "children" : [ {
+        "name" : "testRouteOpen",
+        "uid" : "b8f01e7d9d83e2bd",
+        "parentUid" : "6e75ad0916a9e72603a9e326a51bc821",
+        "status" : "passed",
+        "time" : {
+          "start" : 1659078069931,
+          "stop" : 1659078098244,
+          "duration" : 28313
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 2,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "testWaitRouteButton",
+        "uid" : "40976bc93029691",
+        "parentUid" : "6e75ad0916a9e72603a9e326a51bc821",
+        "status" : "broken",
+        "time" : {
+          "start" : 1659078098418,
+          "stop" : 1659078118534,
+          "duration" : 20116
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 2,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6e75ad0916a9e72603a9e326a51bc821"
+    } ],
+    "uid" : "2a0e08a3a2b16b3c9aa5ced031b03072"
+  } ]
+}

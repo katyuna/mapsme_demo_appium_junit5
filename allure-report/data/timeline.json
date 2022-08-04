@@ -1,0 +1,165 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "MSI",
+    "children" : [ {
+      "name" : "26412@MSI.main(1)",
+      "children" : [ {
+        "name" : "Open search category bottom sheet",
+        "uid" : "5755d9a59b0fa61c",
+        "parentUid" : "ec661210f8a7c83c01e1dd775c349650",
+        "status" : "broken",
+        "time" : {
+          "start" : 1659077477980,
+          "stop" : 1659077503288,
+          "duration" : 25308
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ec661210f8a7c83c01e1dd775c349650"
+    }, {
+      "name" : "25928@MSI.main(1)",
+      "children" : [ {
+        "name" : "Open route bottom sheet",
+        "uid" : "b8f01e7d9d83e2bd",
+        "parentUid" : "de66658a98ce77feb870c81e37f4329f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1659078069931,
+          "stop" : 1659078098244,
+          "duration" : 28313
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 2,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Wait route button",
+        "uid" : "40976bc93029691",
+        "parentUid" : "de66658a98ce77feb870c81e37f4329f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1659078098418,
+          "stop" : 1659078118534,
+          "duration" : 20116
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 2,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "de66658a98ce77feb870c81e37f4329f"
+    }, {
+      "name" : "220@MSI.main(1)",
+      "children" : [ {
+        "name" : "Open search category bottom sheet",
+        "uid" : "8d8b1abd0e08895e",
+        "parentUid" : "cb55d37df5e70e829c290fa2a8afe6d5",
+        "status" : "broken",
+        "time" : {
+          "start" : 1659077072119,
+          "stop" : 1659077092850,
+          "duration" : 20731
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "cb55d37df5e70e829c290fa2a8afe6d5"
+    }, {
+      "name" : "27488@MSI.main(1)",
+      "children" : [ {
+        "name" : "Open route bottom sheet",
+        "uid" : "568e0f37fc9ffd6f",
+        "parentUid" : "3d93ad958b16b95c202c2ce782baabb4",
+        "status" : "broken",
+        "time" : {
+          "start" : 1659077142091,
+          "stop" : 1659077162323,
+          "duration" : 20232
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Wait route button",
+        "uid" : "3ea87537648f3e16",
+        "parentUid" : "3d93ad958b16b95c202c2ce782baabb4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1659077162612,
+          "stop" : 1659077172933,
+          "duration" : 10321
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3d93ad958b16b95c202c2ce782baabb4"
+    }, {
+      "name" : "11808@MSI.main(1)",
+      "children" : [ {
+        "name" : "Open route bottom sheet",
+        "uid" : "dffaa41a08d40c49",
+        "parentUid" : "9a0800f20303b23b27b2f2db055471ea",
+        "status" : "broken",
+        "time" : {
+          "start" : 1659077226513,
+          "stop" : 1659077246719,
+          "duration" : 20206
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Wait route button",
+        "uid" : "995d1991507d877f",
+        "parentUid" : "9a0800f20303b23b27b2f2db055471ea",
+        "status" : "broken",
+        "time" : {
+          "start" : 1659077246959,
+          "stop" : 1659077267059,
+          "duration" : 20100
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9a0800f20303b23b27b2f2db055471ea"
+    } ],
+    "uid" : "4e235fbd4c199973bc00f3dda2ae852d"
+  } ]
+}

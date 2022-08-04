@@ -1,0 +1,61 @@
+{
+  "a8a98a8a554f664c8af8bb285eeaab47" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "40976bc93029691",
+      "status" : "broken",
+      "statusDetails" : "Can't locate an element by this strategy: By.chained({By.xpath: .//android.view.View[@resource-id='bottom_bar_routes']})",
+      "time" : {
+        "start" : 1659078098418,
+        "stop" : 1659078118534,
+        "duration" : 20116
+      }
+    } ]
+  },
+  "78a7df329067b2e076b42605fd79f8a1" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b8f01e7d9d83e2bd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1659078069931,
+        "stop" : 1659078098244,
+        "duration" : 28313
+      }
+    } ]
+  },
+  "b00c78edbeba9dea161b09848eab0fd9" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "5755d9a59b0fa61c",
+      "status" : "broken",
+      "statusDetails" : "Can't locate an element by this strategy: By.chained({By.xpath: .//android.view.View[@resource-id='bottom_bar_search']})",
+      "time" : {
+        "start" : 1659077477980,
+        "stop" : 1659077503288,
+        "duration" : 25308
+      }
+    } ]
+  }
+}

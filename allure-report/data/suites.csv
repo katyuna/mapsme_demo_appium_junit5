@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Fri Jul 29 13:51:17 NOVT 2022","Fri Jul 29 13:51:43 NOVT 2022","25308","","mainscreen.SearchTest","","mainscreen.SearchTest","testIsSearchCategoriesBottomSheetOpenedFromMainScreen","Open search category bottom sheet",""
+"broken","Fri Jul 29 14:01:38 NOVT 2022","Fri Jul 29 14:01:58 NOVT 2022","20116","","mainscreen.RouteTest","","mainscreen.RouteTest","testWaitRouteButton","Wait route button",""
+"passed","Fri Jul 29 14:01:09 NOVT 2022","Fri Jul 29 14:01:38 NOVT 2022","28313","","mainscreen.RouteTest","","mainscreen.RouteTest","testRouteOpen","Open route bottom sheet",""

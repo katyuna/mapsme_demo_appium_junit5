@@ -1,0 +1,31 @@
+[ {
+  "uid" : "b8f01e7d9d83e2bd",
+  "name" : "Open route bottom sheet",
+  "time" : {
+    "start" : 1659078069931,
+    "stop" : 1659078098244,
+    "duration" : 28313
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5755d9a59b0fa61c",
+  "name" : "Open search category bottom sheet",
+  "time" : {
+    "start" : 1659077477980,
+    "stop" : 1659077503288,
+    "duration" : 25308
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "40976bc93029691",
+  "name" : "Wait route button",
+  "time" : {
+    "start" : 1659078098418,
+    "stop" : 1659078118534,
+    "duration" : 20116
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]

@@ -26,9 +26,16 @@ public class SearchBottomSheet {
 
     //[Х]
     //@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.widget.Button")
-    @AndroidFindBy(xpath = "//android.view.View[@content-desc='closeButton']")
+    @AndroidFindBy(xpath = ".//android.view.View[@content-desc='closeButton']")
     private WebElement closeSearchCategoriesSheetButton;
 
+    //Search field
+    @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.widget.EditText")
+    private WebElement searchField;
+
+    //First search result
+    @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View[3]/android.view.View[1]")
+    private WebElement firstSearchResult;
 
     //Is Search categories sheet header displayed
     public boolean isSearchCategoriesConteiner() {
@@ -40,8 +47,30 @@ public class SearchBottomSheet {
         return searchIcon.isDisplayed();
     }
 
+    //Is Search results displayed
+    public boolean isSearchResult() {
+        return firstSearchResult.isDisplayed();
+    }
+
+    //Click search icon
+    public void clickSearchIcon() {
+        this.searchIcon.click();
+    }
+
+    //Enter search
+    public void setSearch(String search) {
+        this.searchField.sendKeys(search);
+    }
+
+    //Click search result
+    public void clickSearchResult() {
+        this.firstSearchResult.click();
+    }
+
     //Close Search categories sheet by click [x]
     public void clickCloseButton() {
         this.closeSearchCategoriesSheetButton.click();
     }
+
+
 }

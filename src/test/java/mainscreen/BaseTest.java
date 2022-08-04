@@ -46,7 +46,7 @@ public class BaseTest {
         driver = new AndroidDriver(url, capabilities);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-        /* driver.resetApp();
+        /*driver.resetApp();
         if(driver.findElement(By.xpath(".//android.widget.Button[@resource-id='com.android.permissioncontroller:id/permission_allow_foreground_only_button']")).isDisplayed()){
             driver.findElement(By.xpath(".//android.widget.Button[@resource-id='com.android.permissioncontroller:id/permission_allow_foreground_only_button']")).click();
          }

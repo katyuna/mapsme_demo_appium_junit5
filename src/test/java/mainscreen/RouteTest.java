@@ -14,8 +14,8 @@ public class RouteTest extends BaseTest {
     RouteBottomSheet routeBottomSheet = new RouteBottomSheet(driver);
     @Test
     @Order(1)
-    @DisplayName("Open route bottom sheet with steps")
-    @Description("Wait until rout button displays")
+    @DisplayName("Open route bottom sheet")
+    @Description("Open and clise route bottom sheet")
     public void testRouteOpenSteps() {
         waitRouteButton();
         openRouteSheet();
